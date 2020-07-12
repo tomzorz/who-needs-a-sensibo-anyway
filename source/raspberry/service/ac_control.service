@@ -1,0 +1,11 @@
+[Unit]
+Description=Looking Glass AC Control
+After=network.target
+
+[Service]
+WorkingDirectory=/home/pi/ir/api/
+ExecStart=/usr/bin/python3 /home/pi/ir/api/server.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
